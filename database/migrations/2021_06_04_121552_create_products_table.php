@@ -19,10 +19,10 @@ class CreateProductsTable extends Migration
             $table->string('model');
             $table->integer('price');
             $table->string('description');
-            $table->string('img_name')->default('Thuiswerkproduct.');
-            $table->string('img_path')->default('/uploads/placeholder.png');
             $table->string("category")->references('category')->on('category');
             $table->string("sub_category")->references('sub_category')->on('sub_category');
+            $table->string('img_alt')->default('Een afbeelding van een thuiswerkproduct.');
+            $table->string('img_path')->default('/uploads/placeholder.png');
             $table->integer('limit')->default(1);
             $table->boolean('permission')->default(true);
             $table->integer('rule')->references('id')->on('rules')->nullable();
