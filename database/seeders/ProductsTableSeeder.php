@@ -86,7 +86,7 @@ class ProductsTableSeeder extends Seeder
           "permission" => false,
           "rule" => 2,
         ]);
-        
+
         DB::table('products')->insert([
           "brand" => "HP",
           "model" => "Officejet 6950",
@@ -144,7 +144,7 @@ class ProductsTableSeeder extends Seeder
         ]);
         DB::table('products')->insert([
           "brand" => "Merkloos",
-          "model" => "Mk. 1", 
+          "model" => "Mk. 1",
           "category" => "Werkplek",
           "sub_category" => "Bureau",
           "price" => 40000,
