@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use DB;
 
-class users_table_seeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -22,7 +22,6 @@ class users_table_seeder extends Seeder
         "password" => "ipmedt4-groep6",
         "house_number" => "45",
         "postal_code" => "2402DD",
-
         "department" => "Marketing",
       ]);
       DB::table('users')->insert([
