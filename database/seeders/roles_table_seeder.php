@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use DB;
 
 class roles_table_seeder extends Seeder
 {

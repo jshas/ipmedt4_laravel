@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use DB;
 
 class users_table_seeder extends Seeder
 {
@@ -13,7 +14,7 @@ class users_table_seeder extends Seeder
      */
     public function run()
     {
-      \DB::table('users')->insert([
+      DB::table('users')->insert([
         "first_name" => "Jasmin",
         "last_name" => "Engels",
         "address" => "Lange jan straat",
@@ -21,7 +22,7 @@ class users_table_seeder extends Seeder
         "postal_code" => "2402DD",
         "department" => "Marketing",
       ]);
-      \DB::table('users')->insert([
+      DB::table('users')->insert([
         "first_name" => "Martin",
         "last_name" => "Hakken",
         "address" => "Keizerstraat",
@@ -29,7 +30,7 @@ class users_table_seeder extends Seeder
         "postal_code" => "2020EF",
         "department" => "Controlling",
       ]);
-      \DB::table('users')->insert([
+      DB::table('users')->insert([
         "first_name" => "Lucie",
         "last_name" => "Kuipers",
         "address" => "Henry dunant straat",
@@ -37,7 +38,7 @@ class users_table_seeder extends Seeder
         "postal_code" => "2422CF",
         "department" => "IT",
       ]);
-      \DB::table('users')->insert([
+      DB::table('users')->insert([
         "first_name" => "Herman",
         "last_name" => "Kort",
         "insertion" => "van",
