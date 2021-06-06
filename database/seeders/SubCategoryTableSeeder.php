@@ -16,32 +16,32 @@ class SubCategoryTableSeeder extends Seeder
     public function run()
     {
 
-        DB::insert([
-            "sub-category" => "Beeldscherm",
+        DB::table('sub_category')->insert([
+            "sub_category" => "Beeldscherm",
         ]);
-        DB::insert([
-            "sub-category" => "Bureau",
+        DB::table('sub_category')->insert([
+            "sub_category" => "Bureau",
         ]);
-        DB::insert([
-            "sub-category" => "Cartridge",
+        DB::table('sub_category')->insert([
+            "sub_category" => "Cartridge",
         ]);
-        DB::insert([
-            "sub-category" => "Headset",
+        DB::table('sub_category')->insert([
+            "sub_category" => "Headset",
         ]);
-        DB::insert([
-            "sub-category" => "Muis",
+        DB::table('sub_category')->insert([
+            "sub_category" => "Muis",
         ]);
-        DB::insert([
-            "sub-category" => "Printer",
+        DB::table('sub_category')->insert([
+            "sub_category" => "Printer",
         ]);
-        DB::insert([
-            "sub-category" => "Toetsenbord",
+        DB::table('sub_category')->insert([
+            "sub_category" => "Toetsenbord",
         ]);
-        DB::insert([
-            "sub-category" => "USB",
+        DB::table('sub_category')->insert([
+            "sub_category" => "USB",
         ]);
-        DB::insert([
-            "sub-category" => "Voetensteun",
+        DB::table('sub_category')->insert([
+            "sub_category" => "Voetensteun",
         ]);
     }
 }
