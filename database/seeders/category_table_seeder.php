@@ -14,22 +14,22 @@ class category_table_seeder extends Seeder
      */
     public function run()
     {
-      \DB::table('category')->insert([
+      DB::table('category')->insert([
         "category" => "Communicatie",
       ]);
-      \DB::table('category')->insert([
+      DB::table('category')->insert([
         "category" => "Ergonomie",
       ]);
-      \DB::table('category')->insert([
+      DB::table('category')->insert([
         "category" => "Kabel",
       ]);
-      \DB::table('category')->insert([
+      DB::table('category')->insert([
         "category" => "Print",
       ]);
-      \DB::table('category')->insert([
+      DB::table('category')->insert([
         "category" => "Randapparatuur",
       ]);
-      \DB::table('category')->insert([
+      DB::table('category')->insert([
         "category" => "Werkplek",
       ]);
     }

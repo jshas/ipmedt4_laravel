@@ -14,16 +14,16 @@ class rules_table_seeder extends Seeder
      */
     public function run()
     {
-      \DB::table('rules')->insert([
+      DB::table('rules')->insert([
         "description" => "Maximaal 1 per persoon. Goedkeuring van manager",
       ]);
-      \DB::table('rules')->insert([
+      DB::table('rules')->insert([
         "description" => "Maximaal 10 per jaar",
       ]);
-      \DB::table('rules')->insert([
+      DB::table('rules')->insert([
         "description" => "Maximaal 1 per jaar",
       ]);
-      \DB::table('rules')->insert([
+      DB::table('rules')->insert([
         "description" => "Maximaal 1 per jaar zonder goedkeuring",
       ]);
     }

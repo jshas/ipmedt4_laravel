@@ -14,13 +14,13 @@ class departments_table_seeder extends Seeder
      */
     public function run()
     {
-      \DB::table('departments')->insert([
+      DB::table('departments')->insert([
         "department" => "Marketing",
       ]);
-      \DB::table('departments')->insert([
+      DB::table('departments')->insert([
         "department" => "Controlling",
       ]);
-      \DB::table('departments')->insert([
+      DB::table('departments')->insert([
         "department" => "IT",      
       ]);
     }

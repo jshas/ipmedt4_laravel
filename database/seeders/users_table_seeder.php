@@ -19,8 +19,10 @@ class users_table_seeder extends Seeder
         "last_name" => "Engels",
         "address" => "Lange jan straat",
         "email" => "test.jasmin@jungheinrich.nl",
+        "password" => "ipmedt4-groep6",
         "house_number" => "45",
         "postal_code" => "2402DD",
+
         "department" => "Marketing",
       ]);
       DB::table('users')->insert([
@@ -28,6 +30,7 @@ class users_table_seeder extends Seeder
         "last_name" => "Hakken",
         "address" => "Keizerstraat",
         "email" => "test.martin@jungheinrich.nl",
+        "password" => "ipmedt4-groep6",
         "house_number" => "19",
         "postal_code" => "2020EF",
         "department" => "Controlling",
@@ -37,6 +40,7 @@ class users_table_seeder extends Seeder
         "last_name" => "Kuipers",
         "address" => "Henry dunant straat",
         "email" => "test.lucie@jungheinrich.nl",
+        "password" => "ipmedt4-groep6",
         "house_number" => "212",
         "postal_code" => "2422CF",
         "department" => "IT",
@@ -47,6 +51,7 @@ class users_table_seeder extends Seeder
         "insertion" => "van",
         "address" => "Stationstraat",
         "email" => "test.herman@jungheinrich.nl",
+        "password" => "ipmedt4-groep6",
         "house_number" => "44",
         "postal_code" => "1234GF",
         "Role" => "Manager",
