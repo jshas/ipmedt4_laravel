@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Rule extends Model
 {
     protected $table = "rules";
+
+    public function product(){
+        return $this->belongsTo('App\Models\Product', 'id', 'rule');
+    }
+
+    
 }
