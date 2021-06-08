@@ -25,7 +25,7 @@ class CreateProductsTable extends Migration
             $table->string('img_path')->default('/img/placeholder.png');
             $table->integer('limit')->default(1);
             $table->boolean('permission')->default(true);
-            $table->integer('rule')->references('id')->on('rules')->nullable();
+            $table->integer('rule_id')->references('id')->on('rules')->nullable();
         });
     }
 

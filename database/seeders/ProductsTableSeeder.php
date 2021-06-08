@@ -36,7 +36,7 @@ class ProductsTableSeeder extends Seeder
           "description"=>"Een voetensteun die de voet- en beenpositie bevorderd. Het oppervlakte heeft een anti-slip laag.",
           "img_path" => "public/img/fellowes_159719.png", 
           "img_alt" => "Een zwarte voetensteun met donkergrijze antislip stippen.",  
-          "rule" => 1,
+          "rule_id" => 1,
         ]);
 
         DB::table('products')->insert([
@@ -61,7 +61,7 @@ class ProductsTableSeeder extends Seeder
           "img_path" => "public/img/hp_953XL_zwart.png", 
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
           "permission" => false,
-          "rule" => 2,
+          "rule_id" => 2,
         ]);
 
         DB::table('products')->insert([
@@ -74,7 +74,7 @@ class ProductsTableSeeder extends Seeder
           "img_path" => "public/img/hp_953XL_kleur.png", 
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
           "permission" => false,
-          "rule" => 2,
+          "rule_id" => 2,
         ]);
 
         DB::table('products')->insert([
@@ -87,7 +87,7 @@ class ProductsTableSeeder extends Seeder
           "img_path" => "public/img/hp_301XL_zwart.png", 
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",          
           "permission" => false,
-          "rule" => 2,
+          "rule_id" => 2,
         ]);
 
         DB::table('products')->insert([
@@ -100,7 +100,7 @@ class ProductsTableSeeder extends Seeder
           "img_path" => "public/img/hp_301XL_kleur.png", 
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
           "permission" => false,
-          "rule" => 2,
+          "rule_id" => 2,
         ]);
 
         DB::table('products')->insert([
@@ -124,7 +124,7 @@ class ProductsTableSeeder extends Seeder
           "img_path" => "public/img/hp_eletedisplay_24.png", 
           "img_alt" => "Vooraanzicht van een zilvere beeldscherm.", 
           "permission" => false,
-          "rule" => 4,
+          "rule_id" => 4,
         ]);
 
         DB::table('products')->insert([
@@ -137,7 +137,7 @@ class ProductsTableSeeder extends Seeder
           "description"=> "Draadloze muis met een ergonomische grip (rechtshandig). De MX Master 3 een extra duim scrollwiel en 2 vrij instelbare knoppen.",
           "img_path" => "public/img/logitech_mx_master_3.png", 
           "img_alt" => "Zijaazicht van een draadloze muis met een ergonomische grip..", 
-          "rule" => 3,
+          "rule_id" => 3,
         ]);
 
         DB::table('products')->insert([
@@ -150,7 +150,7 @@ class ProductsTableSeeder extends Seeder
           "img_path" => "public/img/hp_200.png", 
           "img_alt" => "Bovenaanzicht van een kleine, draadloze zwarte muis met usb ontvanger.", 
           "permission" => false,
-          "rule" => 3,
+          "rule_id" => 3,
 
         ]);
 
@@ -165,7 +165,7 @@ class ProductsTableSeeder extends Seeder
           "img_path" => "public/img/hp_400.png", 
           "img_alt" => "Vooraanzicht van een zwarte toetsenbord en muis.", 
           "permission" => false,
-          "rule" => 3,
+          "rule_id" => 3,
 
         ]);
 

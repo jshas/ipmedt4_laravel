@@ -14,8 +14,8 @@ class ProductController extends Controller{
     }
 
     public function show($id){
-        $product = Product::find($id)->with('rule');
-        $product_rule = $product::with;
+        $product = Product::find($id);
+        $product_rule = $product->rule;
         return $product;
     }
 
