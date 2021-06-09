@@ -121,7 +121,7 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "Beeldscherm",
           "price" => 12999,
           "description"=> "Een 24 inch full-HD (1920 x 1080) beeldscherm met een in hoogte verstelbare voet en draaibaar- en kantelbaar scherm.",
-          "img_path" => "img/hp_eletedisplay_24.png", 
+          "img_path" => "img/hp_elitedisplay_24.png", 
           "img_alt" => "Vooraanzicht van een zilvere beeldscherm.", 
           "permission" => false,
           "rule_id" => 4,
