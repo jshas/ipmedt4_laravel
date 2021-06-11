@@ -14,17 +14,25 @@ class RulesTableSeeder extends Seeder
      */
     public function run()
     {
+      // Yearly limit -> Hoe vaak een product per jaar best
       DB::table('rules')->insert([
-        "description" => "Maximaal 1 per persoon. Goedkeuring van manager",
+        "description" => "Maximaal 1 per persoon. Goedkeuring van manager.",
+        "total_limit" => 1,
       ]);
+
       DB::table('rules')->insert([
-        "description" => "Maximaal 10 per jaar",
+        "description" => "Maximaal 10 per jaar.",
+        "yearly_limit" => 10,
       ]);
+
       DB::table('rules')->insert([
-        "description" => "Maximaal 1 per jaar",
+        "description" => "Maximaal 1 per jaar.",
+        "total_limit" => 1,
       ]);
+
       DB::table('rules')->insert([
-        "description" => "Maximaal 1 per jaar zonder goedkeuring",
+        "description" => "Maximaal 1 per jaar zonder goedkeuring.",
+        "yearly_limit" => 1,
       ]);
     }
 }
