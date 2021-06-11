@@ -19,8 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/products/', 'App\Http\Controllers\ProductController@index'); 
+Route::get('/products', 'App\Http\Controllers\ProductController@index'); 
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show');
 
 Route::get('/users', 'App\Http\Controllers\UserController@index');
 Route::get('/users/{id}', 'App\Http\Controllers\UserController@show');
+
+Route::get('/order/{user_id}/{product_id}', 'App\Http\Controllers\OrderController@plaatsOrder');
