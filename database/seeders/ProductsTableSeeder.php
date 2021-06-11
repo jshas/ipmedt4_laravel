@@ -62,7 +62,7 @@ class ProductsTableSeeder extends Seeder
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
           "permission" => false,
           "rule_id" => 2,
-          "limit" => 10,
+
         ]);
 
         DB::table('products')->insert([
@@ -76,7 +76,7 @@ class ProductsTableSeeder extends Seeder
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
           "permission" => false,
           "rule_id" => 2,
-          "limit" => 10,
+
         ]);
 
         DB::table('products')->insert([
