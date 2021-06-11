@@ -23,9 +23,10 @@ class CreateProductsTable extends Migration
             $table->string('description');
             $table->string('img_alt')->default('Een afbeelding van een thuiswerkproduct.');
             $table->string('img_path')->default('/img/placeholder.png');
-            $table->integer('limit')->default(1);
-            $table->boolean('permission')->default(true);
+            $table->boolean('permission_needed')->default(true); // Bestelling vereist toestemming van de manager
+            $table->integer('order_limit')->default(1); // Kwantiteit van een product per enkele order
             $table->integer('rule_id')->references('id')->on('rules')->nullable();
+
         });
     }
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Rule;
-use App\Models\user;
+use App\Models\User;
 use App\Models\Order;
 use DB;
 

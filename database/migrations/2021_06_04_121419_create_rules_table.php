@@ -16,8 +16,8 @@ class CreateRulesTable extends Migration
         Schema::create('rules', function (Blueprint $table) {
             $table->id();
             $table->string('description')->unique();
-            $table->int('yearly_limit')->nullable(); // b.v.: 10 inktcartridges / p. jaar
-            $table->int('total_limit')->nullable();          // b.v.: maximaal 1 headset per persoon
+            $table->integer('yearly_limit')->nullable(); // b.v.: 10 inktcartridges / p. jaar
+            $table->integer('total_limit')->nullable();          // b.v.: maximaal 1 headset per persoon
         });
     }
 

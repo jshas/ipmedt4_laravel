@@ -48,7 +48,7 @@ class ProductsTableSeeder extends Seeder
           "description"=>"Een 2 meter lange USB-A (male) naar USB-C (male) kabel.",
           "img_path" => "img/usb_a_to_c_black.png",
           "img_alt" => "Zijaanicht van een USB kabel die de USB-A en USB-C aansluitingen weergeeft.",
-          "permission" => false,
+          "permission_needed" => false,
         ]);
 
         DB::table('products')->insert([
@@ -60,7 +60,7 @@ class ProductsTableSeeder extends Seeder
           "description"=> "Een zwarte inktcartridge. Geschikt voor 2000 prints.",
           "img_path" => "img/hp_953XL_zwart.png",
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
-          "permission" => false,
+          "permission_needed" => false,
           "rule_id" => 2,
 
         ]);
@@ -74,7 +74,7 @@ class ProductsTableSeeder extends Seeder
           "description"=> "Een originele HP 953XL kleur inktcartridge set. Bevat 3 cartridges met de kleuren rood, geel en cyaan. Geschikt voor 2000 prints.",
           "img_path" => "img/hp_953XL_kleur.png",
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
-          "permission" => false,
+          "permission_needed" => false,
           "rule_id" => 2,
 
         ]);
@@ -88,7 +88,7 @@ class ProductsTableSeeder extends Seeder
           "description"=> "Een originele HP inktcartridge. Geschikt voor 2000 prints.",
           "img_path" => "img/hp_301XL_zwart.png",
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
-          "permission" => false,
+          "permission_needed" => false,
           "rule_id" => 2,
         ]);
 
@@ -101,7 +101,7 @@ class ProductsTableSeeder extends Seeder
           "description"=> "Een originele HP 301XL kleur inktcartridge set. Bevat 3 cartridges met de kleuren rood, geel en cyaan. Geschikt voor 2000 prints.",
           "img_path" => "img/hp_301XL_kleur.png",
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
-          "permission" => false,
+          "permission_needed" => false,
           "rule_id" => 2,
         ]);
 
@@ -125,7 +125,7 @@ class ProductsTableSeeder extends Seeder
           "description"=> "Een 24 inch full-HD (1920 x 1080) beeldscherm met een in hoogte verstelbare voet en draaibaar- en kantelbaar scherm.",
           "img_path" => "img/hp_elitedisplay_24.png",
           "img_alt" => "Vooraanzicht van een zilvere beeldscherm.",
-          "permission" => false,
+          "permission_needed" => false,
           "rule_id" => 4,
         ]);
 
@@ -151,7 +151,7 @@ class ProductsTableSeeder extends Seeder
           "description"=> "Een kleine draadloze muis geschikt voor links- en rechtshandigen. Ideaal voor onderweg.",
           "img_path" => "img/hp_200.png",
           "img_alt" => "Bovenaanzicht van een kleine, draadloze zwarte muis met usb ontvanger.",
-          "permission" => false,
+          "permission_needed" => false,
           "rule_id" => 3,
 
         ]);
@@ -166,7 +166,7 @@ class ProductsTableSeeder extends Seeder
           "description"=> "Zwart HP toetsenbord met USB-kabel. Bezit geen draadloze functionaliteit.",
           "img_path" => "img/hp_400.png",
           "img_alt" => "Vooraanzicht van een zwarte toetsenbord en muis.",
-          "permission" => false,
+          "permission_needed" => false,
           "rule_id" => 3,
 
         ]);
