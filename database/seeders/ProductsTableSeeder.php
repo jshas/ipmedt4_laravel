@@ -22,8 +22,8 @@ class ProductsTableSeeder extends Seeder
           "category" => "Communicatie",
           "sub_category" => "Headset",
           "description"=> "Een draadloze bluetooth headset gelijk aan het model op kantoor.",
-          "img_path" => "img/poly_b825m.png", 
-          "img_alt" => "Een draadloze bluetooth headset met kleine oorschelpen en een microfoon.", 
+          "img_path" => "img/poly_b825m.png",
+          "img_alt" => "Een draadloze bluetooth headset met kleine oorschelpen en een microfoon.",
 
         ]);
 
@@ -34,8 +34,8 @@ class ProductsTableSeeder extends Seeder
           "category" => "Ergonomie",
           "sub_category" => "Voetensteun",
           "description"=>"Een voetensteun die de voet- en beenpositie bevorderd. Het oppervlakte heeft een anti-slip laag.",
-          "img_path" => "img/fellowes_159719.png", 
-          "img_alt" => "Een zwarte voetensteun met donkergrijze antislip stippen.",  
+          "img_path" => "img/fellowes_159719.png",
+          "img_alt" => "Een zwarte voetensteun met donkergrijze antislip stippen.",
           "rule_id" => 1,
         ]);
 
@@ -46,8 +46,8 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "USB",
           "price" => 599,
           "description"=>"Een 2 meter lange USB-A (male) naar USB-C (male) kabel.",
-          "img_path" => "img/usb_a_to_c_black.png", 
-          "img_alt" => "Zijaanicht van een USB kabel die de USB-A en USB-C aansluitingen weergeeft.", 
+          "img_path" => "img/usb_a_to_c_black.png",
+          "img_alt" => "Zijaanicht van een USB kabel die de USB-A en USB-C aansluitingen weergeeft.",
           "permission" => false,
         ]);
 
@@ -58,10 +58,11 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "Cartridge",
           "price" => 2499,
           "description"=> "Een zwarte inktcartridge. Geschikt voor 2000 prints.",
-          "img_path" => "img/hp_953XL_zwart.png", 
+          "img_path" => "img/hp_953XL_zwart.png",
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
           "permission" => false,
           "rule_id" => 2,
+          "limit" => 10,
         ]);
 
         DB::table('products')->insert([
@@ -71,10 +72,11 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "Cartridge",
           "price" => 2499,
           "description"=> "Een originele HP 953XL kleur inktcartridge set. Bevat 3 cartridges met de kleuren rood, geel en cyaan. Geschikt voor 2000 prints.",
-          "img_path" => "img/hp_953XL_kleur.png", 
+          "img_path" => "img/hp_953XL_kleur.png",
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
           "permission" => false,
           "rule_id" => 2,
+          "limit" => 10,
         ]);
 
         DB::table('products')->insert([
@@ -84,8 +86,8 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "Cartridge",
           "price" => 2499,
           "description"=> "Een originele HP inktcartridge. Geschikt voor 2000 prints.",
-          "img_path" => "img/hp_301XL_zwart.png", 
-          "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",          
+          "img_path" => "img/hp_301XL_zwart.png",
+          "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
           "permission" => false,
           "rule_id" => 2,
         ]);
@@ -97,7 +99,7 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "Cartridge",
           "price" => 2499,
           "description"=> "Een originele HP 301XL kleur inktcartridge set. Bevat 3 cartridges met de kleuren rood, geel en cyaan. Geschikt voor 2000 prints.",
-          "img_path" => "img/hp_301XL_kleur.png", 
+          "img_path" => "img/hp_301XL_kleur.png",
           "img_alt" => "Verpakking van de inktcartridge met opdruk en productdetails.",
           "permission" => false,
           "rule_id" => 2,
@@ -110,7 +112,7 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "Printer",
           "price" => 9999,
           "description"=> "Een all-in-one printer met scan mogelijkheden en kopie mogelijkheden. Compatibel met 903(XL) cartridges.",
-          "img_path" => "img/hp_officejet_6950.png", 
+          "img_path" => "img/hp_officejet_6950.png",
           "img_alt" => "Een zwarte printer met scan klep en inlaadplaats voor te kopiëeren documenten.",
         ]);
 
@@ -121,8 +123,8 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "Beeldscherm",
           "price" => 12999,
           "description"=> "Een 24 inch full-HD (1920 x 1080) beeldscherm met een in hoogte verstelbare voet en draaibaar- en kantelbaar scherm.",
-          "img_path" => "img/hp_elitedisplay_24.png", 
-          "img_alt" => "Vooraanzicht van een zilvere beeldscherm.", 
+          "img_path" => "img/hp_elitedisplay_24.png",
+          "img_alt" => "Vooraanzicht van een zilvere beeldscherm.",
           "permission" => false,
           "rule_id" => 4,
         ]);
@@ -135,8 +137,8 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "Muis",
           "price" => 8999,
           "description"=> "Draadloze muis met een ergonomische grip (rechtshandig). De MX Master 3 een extra duim scrollwiel en 2 vrij instelbare knoppen.",
-          "img_path" => "img/logitech_mx_master_3.png", 
-          "img_alt" => "Zijaazicht van een draadloze muis met een ergonomische grip..", 
+          "img_path" => "img/logitech_mx_master_3.png",
+          "img_alt" => "Zijaazicht van een draadloze muis met een ergonomische grip..",
           "rule_id" => 3,
         ]);
 
@@ -147,8 +149,8 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "Muis",
           "price" => 2299,
           "description"=> "Een kleine draadloze muis geschikt voor links- en rechtshandigen. Ideaal voor onderweg.",
-          "img_path" => "img/hp_200.png", 
-          "img_alt" => "Bovenaanzicht van een kleine, draadloze zwarte muis met usb ontvanger.", 
+          "img_path" => "img/hp_200.png",
+          "img_alt" => "Bovenaanzicht van een kleine, draadloze zwarte muis met usb ontvanger.",
           "permission" => false,
           "rule_id" => 3,
 
@@ -162,8 +164,8 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "Toetsenbord",
           "price" => 2499,
           "description"=> "Zwart HP toetsenbord met USB-kabel. Bezit geen draadloze functionaliteit.",
-          "img_path" => "img/hp_400.png", 
-          "img_alt" => "Vooraanzicht van een zwarte toetsenbord en muis.", 
+          "img_path" => "img/hp_400.png",
+          "img_alt" => "Vooraanzicht van een zwarte toetsenbord en muis.",
           "permission" => false,
           "rule_id" => 3,
 
@@ -176,8 +178,8 @@ class ProductsTableSeeder extends Seeder
           "sub_category" => "Bureau",
           "price" => 40000,
           "description"=> "Een verstelbaar bureau om ergonomisch te werken zoals je op kantoor gewend bent.",
-          "img_path" => "img/merkloos_bureau.png", 
-          "img_alt" => "Een bovenaanzicht van een witte bureau met een hendel om de hoogte te verstellen.", 
+          "img_path" => "img/merkloos_bureau.png",
+          "img_alt" => "Een bovenaanzicht van een witte bureau met een hendel om de hoogte te verstellen.",
         ]);
     }
 }
