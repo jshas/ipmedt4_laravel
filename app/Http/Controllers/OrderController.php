@@ -19,8 +19,10 @@ class OrderController extends Controller
         $user_frequentie = Order::all()->where("user_id", "==", $user_id)->where("product_id", "==", $product_id);
         $user_frequentie_count = $user_frequentie->count();
 
-
+        //deze functie checkt hoevaak de gebruiker hetzelde item heeft besteld in het huidige jaar
         $huidig_jaar = Carbon::now()->year;
+        $user_frequentie_jaarlijks = $user_frequentie->where("created_year", "==", $huidig_jaar);
+        $user_frequentie_jaarlijks_count = $user_frequentie_jaarlijks->count();
 
         // deze functie checkt de bestel-limit van het product
         $bestel_limit = Product::all()->where("id", "==", $product_id)->first()->limit;
@@ -47,40 +49,40 @@ class OrderController extends Controller
 
 
         elseif ($product_rule_id == 2) {
-            //hoeveel bestellingen ervan zijn er dit jaar gemaakt.
+            //hoeveel bestellingen van het product zijn er dit jaar gemaakt.
             //als het minder is dan het limit in het huidige jaar
             //voeg dan het product 1 keer toe
+            if ($user_frequentie_jaarlijks_count < $rule_2->yearly_limit) {
+                
+                // hier de code om te bestellen
 
+                return("In de database gezet met regel 2");
+            }
+
+            return("limiet al bereikt");
         }
-
-        // $order_1_year = Order::all()->first()->created_at;
-        // $year_order = Carbon::createFromFormat('Y-m-d H:i:s', $order_1_year)->year;
-        
-        // $year_now = Carbon::now()->year;
         
 
-        DB::table('orders')->insert([
-            'user_id' => $user_id,
-            'product_id' => $product_id,
-            'price' => $product_price,
-        ]);
+        // DB::table('orders')->insert([
+        //     'user_id' => $user_id,
+        //     'product_id' => $product_id,
+        //     'price' => $product_price,
+        // ]);
 
-        return ("Done");
+        return ($user_frequentie_jaarlijks);
 
 
-        // if ( $user_frequentie < $bestel_limit) {
-            // DB::table('orders')->insert([
-            //     'user_id' => $user_id,
-            //     'product_id' => $product_id,
-            //     'price' => $product_price,
-            // ]);
 
-        //     return ("besteld");
-        // }
+        // Dit is voorbeeldcode om te bestellen
 
-        // else{
-        //     return ("over limiet, niet besteld");
-        // }
+        // DB::table('orders')->insert([
+        //     'user_id' => $user_id,
+        //     'product_id' => $product_id,
+        //     'price' => $product_price,
+        // ]);
+
+
+
         
         
     }
