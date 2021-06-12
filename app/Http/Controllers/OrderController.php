@@ -41,6 +41,7 @@ class OrderController extends Controller
             if ($user_frequentie_count < $rule_1->total_limit) {
 
                 // hier de code om te bestellen
+                
 
                 return ("In de database gezet met regel 1");
             }
@@ -61,15 +62,32 @@ class OrderController extends Controller
 
             return("limiet al bereikt");
         }
+
+
+        elseif ($product_rule_id == 3) {
+            if ($user_frequentie_jaarlijks_count < $rule_3->yearly_limit){
+
+                // hier de code om te bestellen
+
+                return ("In de database gezet met regel 3");
+            }
+            
+            return("limiet al bereikt");
+        }
         
 
-        // DB::table('orders')->insert([
-        //     'user_id' => $user_id,
-        //     'product_id' => $product_id,
-        //     'price' => $product_price,
-        // ]);
+        elseif ($product_rule_id == 4) {
+            if ($user_frequentie_jaarlijks_count < $rule_4->yearly_limit){
 
-        return ($user_frequentie_jaarlijks);
+                // hier de code om te bestellen
+
+                return ("In de database gezet met regel 4");
+            }
+            
+            return("limiet al bereikt");
+        }
+
+        return (Product::all()->where("id", "==", $product_id)->first());
 
 
 
