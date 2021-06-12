@@ -27,7 +27,7 @@ class RulesTableSeeder extends Seeder
 
       DB::table('rules')->insert([
         "description" => "Maximaal 1 per jaar.",
-        "total_limit" => 1,
+        "yearly_limit" => 1,
       ]);
 
       DB::table('rules')->insert([
