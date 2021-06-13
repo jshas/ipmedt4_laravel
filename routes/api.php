@@ -14,12 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/products/', 'App\Http\Controllers\ProductController@index'); 
+// Route::middleware('auth:sanctum')->get('/products', 'App\Http\Controllers\ProductController@index');
+Route::get('/products/', 'App\Http\Controllers\ProductController@index');
+
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show');
 
 Route::get('/users', 'App\Http\Controllers\UserController@index');

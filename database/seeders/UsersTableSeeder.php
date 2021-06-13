@@ -24,6 +24,7 @@ class UsersTableSeeder extends Seeder
         "postal_code" => "2402DD",
         "department" => "Marketing",
       ]);
+
       DB::table('users')->insert([
         "first_name" => "Martin",
         "last_name" => "Hakken",
@@ -34,6 +35,7 @@ class UsersTableSeeder extends Seeder
         "postal_code" => "2020EF",
         "department" => "Controlling",
       ]);
+
       DB::table('users')->insert([
         "first_name" => "Lucie",
         "last_name" => "Kuipers",
@@ -44,6 +46,7 @@ class UsersTableSeeder extends Seeder
         "postal_code" => "2422CF",
         "department" => "IT",
       ]);
+      
       DB::table('users')->insert([
         "first_name" => "Herman",
         "last_name" => "Kort",
