@@ -28,6 +28,11 @@ Route::get('/users/{id}', 'App\Http\Controllers\UserController@show');
 
 Route::get('/order/{user_id}/{product_id}', 'App\Http\Controllers\OrderController@plaatsOrder');
 
-Route::get('/{title}', 'App\Http\Controllers\CategoryController@categoriseerProducten');
-
 Route::get('/order/all', 'App\Http\Controllers\OrderController@show');
+
+Route::get('/category/Communicatie', 'App\Http\Controllers\CategoryController@CategorieCommunicatie');
+Route::get('/category/Ergonomie', 'App\Http\Controllers\CategoryController@CategorieErgonomie');
+Route::get('/category/Kabel', 'App\Http\Controllers\CategoryController@CategorieKabel');
+Route::get('/category/Print', 'App\Http\Controllers\CategoryController@CategoriePrint');
+Route::get('/category/Randapparatuur', 'App\Http\Controllers\CategoryController@CategorieRandapparatuur');
+Route::get('/category/Werkplek', 'App\Http\Controllers\CategoryController@CategorieWerkplek');
