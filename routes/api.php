@@ -27,3 +27,5 @@ Route::get('/users', 'App\Http\Controllers\UserController@index');
 Route::get('/users/{id}', 'App\Http\Controllers\UserController@show');
 
 Route::get('/order/{user_id}/{product_id}', 'App\Http\Controllers\OrderController@plaatsOrder');
+
+Route::get('/{title}', 'App\Http\Controllers\CategoryController@categoriseerProducten');
