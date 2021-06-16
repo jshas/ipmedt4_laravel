@@ -41,6 +41,11 @@ class OrderController extends Controller
             if ($user_frequentie_count < $rule_1->total_limit) {
 
                 // hier de code om te bestellen
+                DB::table('orders')->insert([
+                    'user_id' => $user_id,
+                    'product_id' => $product_id,
+                    'price' => $product_price,
+                ]);
                 
 
                 return ("In de database gezet met regel 1");
@@ -56,6 +61,11 @@ class OrderController extends Controller
             if ($user_frequentie_jaarlijks_count < $rule_2->yearly_limit) {
                 
                 // hier de code om te bestellen
+                DB::table('orders')->insert([
+                    'user_id' => $user_id,
+                    'product_id' => $product_id,
+                    'price' => $product_price,
+                ]);
 
                 return("In de database gezet met regel 2");
             }
@@ -101,7 +111,16 @@ class OrderController extends Controller
 
 
 
-        
-        
+    }
+
+
+    public function show(){
+
+        $all = DB::table('orders')->leftJoin('users', 'orders.user_id', '=', 'users.id')->
+        leftJoin('products', 'orders.product_id', '=', 'products.id')->
+        select('orders.*', 'users.first_name', 'users.last_name', 'products.brand', 'products.model', 'products.category', 'products.sub_category')->
+        get();
+
+        return ($all);
     }
 }
