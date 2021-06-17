@@ -18,10 +18,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::middleware('auth:sanctum')->get('/products', 'App\Http\Controllers\ProductController@index');
-Route::get('/products/', 'App\Http\Controllers\ProductController@index');
+Route::middleware('auth:sanctum')->get('/products', 'App\Http\Controllers\ProductController@index');
+// Route::get('/products/', 'App\Http\Controllers\ProductController@index');
 
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show');
+
+Route::get('/users/departments', 'App\Http\Controllers\UserController@departments');
+Route::get('/users/roles', 'App\Http\Controllers\UserController@roles');
+
+Route::post('/users/add', 'App\Http\Controllers\UserController@store');
 
 Route::get('/users', 'App\Http\Controllers\UserController@index');
 Route::get('/users/{id}', 'App\Http\Controllers\UserController@show');
