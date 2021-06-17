@@ -21,7 +21,7 @@ class DepartmentsTableSeeder extends Seeder
         "department" => "Controlling",
       ]);
       DB::table('departments')->insert([
-        "department" => "IT",      
+        "department" => "IT",
       ]);
     }
 }
