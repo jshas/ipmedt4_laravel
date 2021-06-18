@@ -133,4 +133,36 @@ class OrderController extends Controller
 
         return ($all);
     }
+
+
+    public function eenWeek(){
+
+        $all = DB::table('orders')->leftJoin('users', 'orders.user_id', '=', 'users.id')->
+        leftJoin('products', 'orders.product_id', '=', 'products.id')->
+        select('orders.*', 'users.first_name', 'users.last_name', 'products.brand', 'products.model', 'products.category', 'products.sub_category')->
+        get();
+
+        return $all->where('created_at', '>=', Carbon::now()->subDays(7));
+    }
+
+
+    public function tweeWeken(){
+        $all = DB::table('orders')->leftJoin('users', 'orders.user_id', '=', 'users.id')->
+        leftJoin('products', 'orders.product_id', '=', 'products.id')->
+        select('orders.*', 'users.first_name', 'users.last_name', 'products.brand', 'products.model', 'products.category', 'products.sub_category')->
+        get();
+
+        return $all->where('created_at', '>=', Carbon::now()->subDays(14));
+    }
+
+
+    public function ditJaar(){
+        $all = DB::table('orders')->leftJoin('users', 'orders.user_id', '=', 'users.id')->
+        leftJoin('products', 'orders.product_id', '=', 'products.id')->
+        select('orders.*', 'users.first_name', 'users.last_name', 'products.brand', 'products.model', 'products.category', 'products.sub_category')->
+        get();
+
+        return $all->where('created_year', '=', Carbon::now()->year);
+    }
+    
 }

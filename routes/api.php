@@ -34,6 +34,9 @@ Route::get('/users/{id}', 'App\Http\Controllers\UserController@show');
 Route::get('/order/{user_id}/{product_id}', 'App\Http\Controllers\OrderController@plaatsOrder');
 
 Route::get('/order/all', 'App\Http\Controllers\OrderController@show');
+Route::get('order/7dagen', 'App\Http\Controllers\OrderController@eenWeek');
+Route::get('order/14dagen', 'App\Http\Controllers\OrderController@tweeWeken');
+Route::get('order/ditjaar', 'App\Http\Controllers\OrderController@ditJaar');
 
 Route::get('/category/Communicatie', 'App\Http\Controllers\CategoryController@CategorieCommunicatie');
 Route::get('/category/Ergonomie', 'App\Http\Controllers\CategoryController@CategorieErgonomie');
