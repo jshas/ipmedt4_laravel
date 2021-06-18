@@ -33,7 +33,7 @@ Route::post('/users/add', 'App\Http\Controllers\UserController@store');
 Route::middleware('auth:sanctum')->get('/users', 'App\Http\Controllers\UserController@index');
 Route::get('/users/{id}', 'App\Http\Controllers\UserController@show');
 
-Route::get('/order/{user_id}/{product_id}', 'App\Http\Controllers\OrderController@plaatsOrder');
+Route::post('/order/create', 'App\Http\Controllers\OrderController@store');
 
 Route::get('/order/all', 'App\Http\Controllers\OrderController@show');
 Route::get('order/7dagen', 'App\Http\Controllers\OrderController@eenWeek');
