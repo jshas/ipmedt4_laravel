@@ -1,18 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Rule;
+use App\Models\Order;
+use Illuminate\Http\Request;
 use DB;
+use Auth;
+
+
 
 
 class ProductController extends Controller{
-
     public function index(){
-        $products = Product::with('rule')->get()->all(); 
-        return $products;
+        if(Auth::user()->id){
+            $products = Product::with('rule')->get()->all();
+            $user_id = Auth::user()->id;
+            return [$products, $user_id];
+        }
+
     }
 
     public function show($id){
