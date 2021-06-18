@@ -107,6 +107,16 @@ class OrderController extends Controller
             return("limiet al bereikt");
         }
 
+        elseif ($product_rule_id == null) {
+            DB::table('orders')->insert([
+                'user_id' => $user_id,
+                'product_id' => $product_id,
+                'price' => $product_price,
+            ]);
+
+            return ("In de database gezet, product heeft geen regel");
+        }
+
         return (Product::all()->where("id", "==", $product_id)->first());
 
 
@@ -142,7 +152,7 @@ class OrderController extends Controller
         select('orders.*', 'users.first_name', 'users.last_name', 'products.brand', 'products.model', 'products.category', 'products.sub_category')->
         get();
 
-        return $all->where('created_at', '>=', Carbon::now()->subDays(7));
+        return $all->where('created_at', '>=', Carbon::now()->subDays(7))->values();
     }
 
 
@@ -152,7 +162,7 @@ class OrderController extends Controller
         select('orders.*', 'users.first_name', 'users.last_name', 'products.brand', 'products.model', 'products.category', 'products.sub_category')->
         get();
 
-        return $all->where('created_at', '>=', Carbon::now()->subDays(14));
+        return $all->where('created_at', '>=', Carbon::now()->subDays(14))->values();
     }
 
 
@@ -162,7 +172,7 @@ class OrderController extends Controller
         select('orders.*', 'users.first_name', 'users.last_name', 'products.brand', 'products.model', 'products.category', 'products.sub_category')->
         get();
 
-        return $all->where('created_year', '=', Carbon::now()->year);
+        return $all->where('created_year', '=', Carbon::now()->year)->values();
     }
     
 }
