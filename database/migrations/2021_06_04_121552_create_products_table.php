@@ -26,7 +26,6 @@ class CreateProductsTable extends Migration
             $table->boolean('permission_needed')->default(true); // Bestelling vereist toestemming van de manager
             $table->integer('order_limit')->default(1); // Kwantiteit van een product per enkele order
             $table->integer('rule_id')->references('id')->on('rules')->nullable();
-
         });
     }
 

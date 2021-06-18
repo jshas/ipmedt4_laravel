@@ -157,7 +157,6 @@ class ProductsTableSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-
           "brand" => "HP",
           "model" => "450",
           "category" => "Randapparatuur",
@@ -168,7 +167,6 @@ class ProductsTableSeeder extends Seeder
           "img_alt" => "Vooraanzicht van een zwarte toetsenbord en muis.",
           "permission_needed" => false,
           "rule_id" => 3,
-
         ]);
 
         DB::table('products')->insert([

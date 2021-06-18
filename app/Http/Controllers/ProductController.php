@@ -8,6 +8,7 @@ use App\Models\Rule;
 use DB;
 
 class ProductController extends Controller{
+
     public function index(){
         $products = Product::with('rule')->get()->all(); 
         return $products;
