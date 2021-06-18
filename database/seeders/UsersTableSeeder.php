@@ -23,6 +23,8 @@ class UsersTableSeeder extends Seeder
         "house_number" => "45",
         "postal_code" => "2402DD",
         "department" => "Marketing",
+        "img_alt" => "Foto van Jasmin Engels",
+        "img_path" => "/users_img/personeel_1.jpg",
       ]);
 
       DB::table('users')->insert([
@@ -34,6 +36,8 @@ class UsersTableSeeder extends Seeder
         "house_number" => "19",
         "postal_code" => "2020EF",
         "department" => "Controlling",
+        "img_alt" => "Foto van Martin Hakken",
+        "img_path" => "/users_img/personeel_2.jpg",
       ]);
 
       DB::table('users')->insert([
@@ -45,6 +49,8 @@ class UsersTableSeeder extends Seeder
         "house_number" => "212",
         "postal_code" => "2422CF",
         "department" => "IT",
+        "img_alt" => "Foto van Lucie Kuipers",
+        "img_path" => "/users_img/personeel_3.jpg",
       ]);
       
       DB::table('users')->insert([
@@ -58,6 +64,8 @@ class UsersTableSeeder extends Seeder
         "postal_code" => "1234GF",
         "Role" => "Manager",
         "department" => "IT",
+        "img_alt" => "Foto van Herman Kort",
+        "img_path" => "/users_img/personeel_4.jpg",
       ]);
     }
 }

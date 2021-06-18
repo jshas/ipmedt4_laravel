@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('postal_code');
             $table->string('role')->default('Gebruikers');
             $table->string('department');
-            $table->string('img_alt')->default('Gebruiker.');
+            $table->string('img_alt')->default('Foto van medewerker');
             $table->string('img_path')->default('/users_img/placeholder.png');
             $table->rememberToken();
             $table->timestamps();
