@@ -7,14 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    public $timestamps = false;
     protected $table = "products";
 
     public function rule(){
         return $this->hasOne('App\Models\Rule', 'id', 'rule_id');
     }
-
-
-
-
-
 }
