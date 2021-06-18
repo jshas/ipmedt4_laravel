@@ -12,7 +12,18 @@ use Carbon\Carbon;
 
 class OrderController extends Controller
 {
-    public function plaatsOrder($user_id, $product_id){
+    public function store(Request $request){
+        $user_id = $request->user_id ;
+        $product_id_array = $request->product_id_array;
+        $teller = 0;
+
+        $response_array = [];
+
+        for ($index=0; $index < count($product_id_array) ; $index++) { 
+            $teller++;
+        }
+        return $response_array;
+
         $product_price = Product::all()->where("id", "==", $product_id)->first()->price;
 
         // deze functie checkt hoevaak de gebruiker hetzelde item heeft besteld
