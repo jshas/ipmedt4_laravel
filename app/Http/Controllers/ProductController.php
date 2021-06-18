@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\Rule;
 use DB;
 
+
 class ProductController extends Controller{
 
     public function index(){
