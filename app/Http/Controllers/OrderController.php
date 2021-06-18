@@ -78,6 +78,11 @@ class OrderController extends Controller
             if ($user_frequentie_jaarlijks_count < $rule_3->yearly_limit){
 
                 // hier de code om te bestellen
+                DB::table('orders')->insert([
+                    'user_id' => $user_id,
+                    'product_id' => $product_id,
+                    'price' => $product_price,
+                ]);
 
                 return ("In de database gezet met regel 3");
             }
@@ -90,6 +95,11 @@ class OrderController extends Controller
             if ($user_frequentie_jaarlijks_count < $rule_4->yearly_limit){
 
                 // hier de code om te bestellen
+                DB::table('orders')->insert([
+                    'user_id' => $user_id,
+                    'product_id' => $product_id,
+                    'price' => $product_price,
+                ]);
 
                 return ("In de database gezet met regel 4");
             }
