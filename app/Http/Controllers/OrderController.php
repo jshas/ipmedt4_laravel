@@ -8,12 +8,14 @@ use App\Models\Rule;
 use App\Models\User;
 use App\Models\Order;
 use DB;
+use Auth;
 use Carbon\Carbon;
 
 class OrderController extends Controller
 {
     public function store(Request $request){
-        $user_id = $request->user_id ;
+        // $user_id = $request->user_id ;
+        $user_id = Auth::User()->id;
         $product_id_array = $request->product_id_array;
 
         $response_array = [];
@@ -22,7 +24,7 @@ class OrderController extends Controller
             $product_price = Product::all()->where("id", "==", $product_id_array[$index])->first()->price;
             $product_name = Product::all()->where("id", "==", $product_id_array[$index])->first()->sub_category;
 
-            // deze functie checkt hoevaak de gebruiker hetzelde item heeft besteld
+            // deze functie checkt hoevaak de gebruiker hetzelfde item heeft besteld
             $user_frequentie = Order::all()->where("user_id", "==", $user_id)->where("product_id", "==", $product_id_array[$index]);
             $user_frequentie_count = $user_frequentie->count();
 
