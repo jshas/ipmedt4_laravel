@@ -25,8 +25,18 @@ class ProductController extends Controller{
 
     public function show($id){
         $product = Product::find($id);
-        $product_rule = $product->rule;
         return $product;
+    }
+
+    public function store(Request $request, Product $product) {
+        $product->brand = $request->input('brand');
+        $product->model = $request->input('model');
+        $product->price = $request->input('price');
+        $product->category = $request->input('category');
+        $product->sub_category = $request->input('sub_category');
+        $product->description = $request->input('description');
+        
+        $product->save();
     }
 
 };
