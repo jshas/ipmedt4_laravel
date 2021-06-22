@@ -16,16 +16,20 @@ class OrderController extends Controller
     public function store(Request $request){
         // $user_id = $request->user_id ;
         $user_id = Auth::User()->id;
+        $product_id_array = [];
         $product_id_array = $request->product_id_array;
 
         $response_array = [];
 
-        for ($index=0; $index < count($product_id_array) ; $index++) { 
-            $product_price = Product::all()->where("id", "==", $product_id_array[$index])->first()->price;
-            $product_name = Product::all()->where("id", "==", $product_id_array[$index])->first()->sub_category;
-
+        for ($index=0; $index < count($product_id_array); $index++) { 
+            $product = Product::all()->where("id", "==", $product_id_array[$index])->first();
+            $product_price =  $product->price;
+            $product_sub_category = $product->sub_category;
+            $product_brand = $product->brand;
+            $product_model = $product->model;
+            $product_name = $product_sub_category . " " . $product_brand . " " . $product_model;
             // deze functie checkt hoevaak de gebruiker hetzelfde item heeft besteld
-            $user_frequentie = Order::all()->where("user_id", "==", $user_id)->where("product_id", "==", $product_id_array[$index]);
+            $user_frequentie = Order::all()->where("user_id", "==", $user_id)->where("product_id", "==", $product->id);
             $user_frequentie_count = $user_frequentie->count();
 
             //deze functie checkt hoevaak de gebruiker hetzelde item heeft besteld in het huidige jaar
@@ -34,20 +38,17 @@ class OrderController extends Controller
             $user_frequentie_jaarlijks_count = $user_frequentie_jaarlijks->count();
 
             // deze functie checkt de bestel-limit van het product
-            $bestel_limit = Product::all()->where("id", "==", $product_id_array[$index])->first()->limit;
+            $bestel_limit = $product->limit;
 
             // $product_rule = DB::table('products')->join('rules', 'products.rule_id', '=', 'rules.id')->get()->rules.id;
-            $product_rule_id = Product::all()->where("id", "==", $product_id_array[$index])->first()->rule_id;
-
+            $product_rule_id = $product->rule_id;
 
             $rule_1 = Rule::all()->where("id", "==", "1")->first();
             $rule_2 = Rule::all()->where("id", "==", "2")->first();
             $rule_3 = Rule::all()->where("id", "==", "3")->first();
             $rule_4 = Rule::all()->where("id", "==", "4")->first();
 
-            
-
-
+        
             if ($product_rule_id == 1) {
                 if ($user_frequentie_count < $rule_1->total_limit) {
 
@@ -97,7 +98,7 @@ class OrderController extends Controller
                     $response_array[$index] = $product_name . "In de database gezet met regel 3";
                 }
                 
-                $response_array[$index] = "Limiet voor ". $product_name . " al bereikt";
+                $response_array[$index] = "Bestellimiet voor ". $product_name . " al bereikt";
             }
             
 
@@ -124,12 +125,12 @@ class OrderController extends Controller
                     'price' => $product_price,
                 ]);
 
-                $response_array[$index] = $product_name . " In de database gezet, product heeft geen regel";
+                $response_array = $product_name . " is toegevoegd aan de bestelling.";
             }
             
         }
-        return $response_array;
-
+        // return $response_array;
+        return $product_id_array;
         
 
 
