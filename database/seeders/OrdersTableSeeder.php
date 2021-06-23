@@ -22,37 +22,37 @@ class OrdersTableSeeder extends Seeder
     // $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
     // $table->year("created_year")->default(Carbon::now()->year);
     // $table->string('status')->references('status')->on('status')->default('open');
+    
     public function run()
     {
-        // DB::table('orders')->insert([
-        //     "user_id" => 3,
-        //     "product_id" => 2,
-        //     "quantity" => 1,
-        //     "price" => 4100, 
-        //     "status" => 'closed',
-        // ]);
+        DB::table('orders')->insert([
+            "user_id" => 3,
+            "product_id" => 2,
+            "quantity" => 1,
+            "price" => 4100, 
+            "status" => 'closed',
+        ]);
 
-        // DB::table('orders')->insert([
-        //     'user_id' => 3,
-        //     'product_id' => 10,
-        //     'price' => 100,
-        //     'created_at' => '2021-06-12 11:00:00',
-        // ]);
+        DB::table('orders')->insert([
+            'user_id' => 3,
+            'product_id' => 10,
+            'price' => 100,
+            'created_at' => '2021-06-12 11:00:00',
+        ]);
 
-        // DB::table('orders')->insert([
-        //     'user_id' => 3,
-        //     'product_id' => 5,
-        //     'price' => 100,
-        //     'created_at' => '2021-06-10 11:00:00',
-        // ]);
+        DB::table('orders')->insert([
+            'user_id' => 3,
+            'product_id' => 5,
+            'price' => 100,
+            'created_at' => '2021-06-10 11:00:00',
+        ]);
 
-        // DB::table('orders')->insert([
-        //     'user_id' => 3,
-        //     'product_id' => 5,
-        //     'price' => 100,
-        //     'created_at' => '2020-06-10 11:00:00',
-        //     'created_year' => '2020',
-        // ]);
-        
+        DB::table('orders')->insert([
+            'user_id' => 3,
+            'product_id' => 5,
+            'price' => 100,
+            'created_at' => '2020-06-10 11:00:00',
+            'created_year' => '2020',
+        ]);
     }
 }
