@@ -16,7 +16,6 @@ class ProductController extends Controller{
     public function index(){
         if(Auth::user()->id){
             $products = Product::with('rule')->get()->all();
-
             $user_id = Auth::user()->id;
             $orders = Order::all()->where('user_id', '=', $user_id)->countBy('product_id')->sortKeys(); // Provides a count of products ordered by the user
             return [$products, $user_id, $orders];

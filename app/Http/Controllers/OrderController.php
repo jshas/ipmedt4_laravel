@@ -14,11 +14,8 @@ use Carbon\Carbon;
 class OrderController extends Controller
 {
     public function store(Request $request){
-        // $user_id = $request->user_id ;
         $user_id = Auth::User()->id;
-        $product_id_array = [];
         $product_id_array = $request->product_id_array;
-
         $response_array = [];
 
         for ($index=0; $index < count($product_id_array); $index++) { 
@@ -39,8 +36,6 @@ class OrderController extends Controller
 
             // deze functie checkt de bestel-limit van het product
             $bestel_limit = $product->limit;
-
-            // $product_rule = DB::table('products')->join('rules', 'products.rule_id', '=', 'rules.id')->get()->rules.id;
             $product_rule_id = $product->rule_id;
 
             $rule_1 = Rule::all()->where("id", "==", "1")->first();
@@ -130,7 +125,7 @@ class OrderController extends Controller
             
         }
         // return $response_array;
-        return $product_id_array;
+        return $response_array;
         
 
 
@@ -152,12 +147,10 @@ class OrderController extends Controller
 
 
     public function show(){
-
         $all = DB::table('orders')->leftJoin('users', 'orders.user_id', '=', 'users.id')->
         leftJoin('products', 'orders.product_id', '=', 'products.id')->
         select('orders.*', 'users.first_name', 'users.last_name', 'products.brand', 'products.model', 'products.category', 'products.sub_category')->
         get();
-
         return ($all);
     }
 
