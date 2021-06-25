@@ -62,7 +62,7 @@ class UsersTableSeeder extends Seeder
         "password" => bcrypt("ipmedt4-groep6"),
         "house_number" => "44",
         "postal_code" => "1234GF",
-        "Role" => "Manager",
+        "role" => "Manager",
         "department" => "IT",
         "img_alt" => "Foto van Herman Kort",
         "img_path" => "/users_img/personeel_4.jpg",
