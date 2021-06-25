@@ -66,7 +66,6 @@ class OrderController extends Controller
                 //voeg dan het product 1 keer toe
                 if ($user_frequentie_jaarlijks_count < $rule_2->yearly_limit) {
                     
-                    // hier de code om te bestellen
                     DB::table('orders')->insert([
                         'user_id' => $user_id,
                         'product_id' => $product_id_array[$index],
@@ -83,7 +82,6 @@ class OrderController extends Controller
             elseif ($product_rule_id == 3) {
                 if ($user_frequentie_jaarlijks_count < $rule_3->yearly_limit){
 
-                    // hier de code om te bestellen
                     DB::table('orders')->insert([
                         'user_id' => $user_id,
                         'product_id' => $product_id_array[$index],
@@ -100,7 +98,6 @@ class OrderController extends Controller
             elseif ($product_rule_id == 4) {
                 if ($user_frequentie_jaarlijks_count < $rule_4->yearly_limit){
 
-                    // hier de code om te bestellen
                     DB::table('orders')->insert([
                         'user_id' => $user_id,
                         'product_id' => $product_id_array[$index],
@@ -124,22 +121,7 @@ class OrderController extends Controller
             }
             
         }
-        // return $response_array;
         return $response_array;
-        
-
-
-
-        // return (Product::all()->where("id", "==", $product_id_array[$index])->first());
-
-
-        // Dit is voorbeeldcode om te bestellen
-
-        // DB::table('orders')->insert([
-        //     'user_id' => $user_id,
-        //     'product_id' => $product_id_array[$index],
-        //     'price' => $product_price,
-        // ]);
 
 
 
